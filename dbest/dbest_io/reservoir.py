@@ -541,15 +541,15 @@ class ReservoirSampling:
 # print(sample)
 
 # import argparse
-# parser = argparse.ArgumentParser()
+# dbest_parser = argparse.ArgumentParser()
 #
-# parser.add_argument('size', help="Reservoir size", type=int)
-# parser.add_argument('-t', '--threshold',
+# dbest_parser.add_argument('size', help="Reservoir size", type=int)
+# dbest_parser.add_argument('-t', '--threshold',
 #                     help=('threshold to start using gaps, default '
 #                           ' is 4 times the reservoir size'),
 #                     type=int)
-# parser.add_argument('-v', '--verbose', action='store_true')
-# args = parser.parse_args()
+# dbest_parser.add_argument('-v', '--verbose', action='store_true')
+# args = dbest_parser.parse_args()
 #
 # for row in build_reservoir(stdin,
 #                            R=args.size,

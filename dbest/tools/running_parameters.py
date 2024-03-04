@@ -17,7 +17,6 @@
 # limitations under the License.
 #
 from copy import deepcopy
-
 from tools.variables import Slaves
 
 RUNTIME_CONF = {

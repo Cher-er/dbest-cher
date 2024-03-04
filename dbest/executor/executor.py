@@ -10,12 +10,10 @@ import warnings
 from datetime import datetime
 from multiprocessing import set_start_method as set_start_method_cpu
 import csv
-
 import dill
 import numpy as np
 import torch
 from torch.multiprocessing import set_start_method as set_start_method_torch
-
 from catalog.catalog import DBEstModelCatalog
 from executor.queryenginemdn import (
     MdnQueryEngine,
@@ -30,7 +28,7 @@ from executor.queryenginemdn import (
 )
 from dbest_io.sampling import DBEstSampling
 from ml.modeltrainer import GroupByModelTrainer, KdeModelTrainer
-from parser.parser import (
+from dbest_parser.parser import (
     DBEstParser,
     parse_usecols_check_shared_attributes_exist,
     parse_y_check_need_ft_only,
@@ -109,7 +107,7 @@ class SqlExecutor:
                 print("Local mode is on, as no slaves are provided.")
 
     def execute(self, sql):
-        # prepare the parser
+        # prepare the dbest_parser
         if type(sql) == str:
             self.parser = DBEstParser()
             self.parser.parse(sql.lower())
@@ -915,7 +913,7 @@ class SqlExecutor:
                         else:
                             print("OK, local variable " + key + " is defined.")
                 except TypeError:
-                    # self.parser.get_set_variable_value() does not return correctly
+                    # self.dbest_parser.get_set_variable_value() does not return correctly
                     print("Parameter is not changed. Please check your SQL!")
 
                 # save the config

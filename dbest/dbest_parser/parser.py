@@ -461,15 +461,15 @@ if __name__ == "__main__":
         print(parser.get_from_name())
         print(parser.get_sampling_method())
         print(parser.get_sampling_ratio())
-        # print(parser.if_model_need_filter())
+        # print(dbest_parser.if_model_need_filter())
 
-    # parser.parse(
+    # dbest_parser.parse(
     #     "select count(y) from t_m where    1 <=x <=2 GROUP BY z1, z2 ,z3 method uniform")  # scale file
-    # print(parser.if_contain_scaling_factor())
+    # print(dbest_parser.if_contain_scaling_factor())
 
     # ---------------------------------------------------------------------------------------------------------------------------------
     # DML
-    # parser.parse(
+    # dbest_parser.parse(
     #     "select z, count ( y ) from t_m where x BETWEEN  unix_timestamp('2019-02-28T16:00:00.000Z') and unix_timestamp('2019-03-28T16:00:00.000Z') and 321<X1 < 1123 and x2 = 'HaHaHa' and x3='' and x4<5 GROUP BY z1, z2 ,x method uniform scale data   haha/num.csv  size 23")
     parser.parse(
         "select z, var ( y ) from t_m where  unix_timestamp('2019-02-28T16:00:00.000Z')<=x <=unix_timestamp('2019-03-28T16:00:00.000Z') and 321<X1 < 1123 and x2 = 'HaHaHa' and x3='' and x4<5 GROUP BY z1, z2 ,x method uniform scale data   haha/num.csv  size 23"
@@ -477,7 +477,7 @@ if __name__ == "__main__":
     parser.parse(
         "select z, var ( y ) from t_m where   x2 = 'HaHaHa' and x3='' and  GROUP BY z1, z2 ,x method uniform scale data   haha/num.csv  size 23"
     )
-    # print(parser.if_contain_scaling_factor())
+    # print(dbest_parser.if_contain_scaling_factor())
     if parser.if_contain_groupby():
         print("yes, group by")
         print(parser.get_groupby_value())
@@ -491,31 +491,31 @@ if __name__ == "__main__":
         print("where exists!")
         print(parser.get_dml_where_categorical_equal_and_range())
 
-    # print("method, ", parser.get_sampling_method())
+    # print("method, ", dbest_parser.get_sampling_method())
 
-    # # print("scaling factor ", parser.get_scaling_method())
+    # # print("scaling factor ", dbest_parser.get_scaling_method())
 
-    # # print(parser.get_where_x_and_range())
-    # print(parser.get_dml_where_categorical_equal_and_range())
+    # # print(dbest_parser.get_where_x_and_range())
+    # print(dbest_parser.get_dml_where_categorical_equal_and_range())
 
-    # print(parser.get_query_type())
+    # print(dbest_parser.get_query_type())
 
-    # print(parser.get_filter())
+    # print(dbest_parser.get_filter())
 
     # ---------------------------------------------------------------------------------------------------------------------------------
     # set SQL
-    # parser.parse("set encoder='gpu'")
-    # print(parser.parsed)
-    # print(parser.get_query_type())
-    # print((parser.get_set_variable_value()))
+    # dbest_parser.parse("set encoder='gpu'")
+    # print(dbest_parser.parsed)
+    # print(dbest_parser.get_query_type())
+    # print((dbest_parser.get_set_variable_value()))
 
     # ---------------------------------------------------------------------------------------------------------------------------------
     # drop SQL
-    # parser.parse("  drop table haha")
-    # print(parser.get_query_type())
-    # print(parser.drop_get_model())
+    # dbest_parser.parse("  drop table haha")
+    # print(dbest_parser.get_query_type())
+    # print(dbest_parser.drop_get_model())
 
     # ---------------------------------------------------------------------------------------------------------------------------------
     # show SQL
-    # parser.parse("show tables")
-    # print(parser.get_query_type())
+    # dbest_parser.parse("show tables")
+    # print(dbest_parser.get_query_type())

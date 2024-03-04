@@ -4,7 +4,6 @@ import selectors
 import socket
 import traceback
 from datetime import datetime
-
 from dbest_socket import libclient
 
 verbose = False

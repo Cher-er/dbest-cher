@@ -10,7 +10,6 @@ from datetime import datetime
 from multiprocessing import Pool as PoolCPU
 from multiprocessing.pool import ThreadPool
 from operator import itemgetter
-
 import dill
 import numpy as np
 import pandas as pd
@@ -23,21 +22,6 @@ from dbest_socket import app_client
 from tools.running_parameters import shrink_runtime_config
 from scipy import integrate
 from torch.multiprocessing import Pool as PoolGPU
-
-# from torch.multiprocessing import set_start_method
-
-
-# from torch.multiprocessing import Pool, set_start_method
-
-
-# from dbestclient.tools.dftools import get_group_count_from_summary_file
-
-# try:
-#     set_start_method('spawn')
-# except RuntimeError:
-#     print("Fail to set start method as spawn for pytorch multiprocessing, " +
-#           "use default in advance. (see queryenginemdn "
-#           "for more info.)")
 
 
 class GenericQueryEngine:
