@@ -26,5 +26,5 @@ table_header = table_header[:-1]
 sql_executor.execute(f"set table_header='{table_header}'")
 
 # sql_executor.execute("drop table flights_distance_year_date")
-sql_executor.execute(f"create table flights_distance_year_date(distance real, distance real, year_date categorical) from '{dataset_loc}'")
-predications = sql_executor.execute("select avg(distance) from flights_distance_year_date where distance > 0 and year_date = 2023")
+sql_executor.execute(f"create table flights_distance_year_date(distance real, distance real) from '{dataset_loc}'")
+predications = sql_executor.execute("select avg(distance) from flights_distance_year_date where distance > 0")
