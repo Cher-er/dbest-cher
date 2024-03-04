@@ -1,0 +1,13 @@
+{
+  "dataset": "flights",
+  "input_file": "/home/yc/dataset/flights/flights_header/flights_header.csv",
+  "sql_file": "/home/yc/project/daslab-aqp/out/flights/sql/flights_AVG_4.sql",
+  "output_dir": "/home/yc/project/daslab-aqp/out/flights",
+  "pgsql": {
+    "host":"localhost",
+    "port": 5433,
+    "database": "flights",
+    "user": "postgres",
+    "password": "123456"
+  }
+}
