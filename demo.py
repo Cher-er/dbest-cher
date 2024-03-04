@@ -26,6 +26,6 @@ table_header = table_header[:-1]
 sql_executor.execute(f"set table_header='{table_header}'")
 
 # sql_executor.execute("drop table template")
-sql_executor.execute(f"create table template(dep_delay real, distance real, origin_state_abr categorical) from '{dataset_loc}' GROUP BY unique_carrier method uniform size 0.001")
+sql_executor.execute(f"create table template(dep_delay real, distance real, dest_state_abr categorical) from '{dataset_loc}' GROUP BY unique_carrier method uniform size 0.2")
 # SELECT AVG(dep_delay) from flights where dest_state_abr = 'GA';
-predications = sql_executor.execute("select unique_carrier, avg(dep_delay) from template where 1000  <=distance<= 1200 and origin_state_abr = 'LA' GROUP BY unique_carrier")
+predications = sql_executor.execute("select unique_carrier, avg(dep_delay) from template where distance > 0 and dest_state_abr = 'GA' GROUP BY unique_carrier")
