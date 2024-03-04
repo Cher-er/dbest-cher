@@ -1,4 +1,4 @@
-from executor.executor import SqlExecutor
+from dbest.executor.executor import SqlExecutor
 from config.config import DbestConfig
 
 
