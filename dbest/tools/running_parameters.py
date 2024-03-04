@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 from copy import deepcopy
-from tools.variables import Slaves
+from dbest.tools.variables import Slaves
 
 RUNTIME_CONF = {
     "device": "cpu",

@@ -14,8 +14,8 @@ import dill
 import numpy as np
 import torch
 from torch.multiprocessing import set_start_method as set_start_method_torch
-from catalog.catalog import DBEstModelCatalog
-from executor.queryenginemdn import (
+from dbest.catalog.catalog import DBEstModelCatalog
+from dbest.executor.queryenginemdn import (
     MdnQueryEngine,
     MdnQueryEngineGoGs,
     MdnQueryEngineNoRange,
@@ -26,20 +26,19 @@ from executor.queryenginemdn import (
     MdnQueryEngineXCategoricalOneModel,
     QueryEngineFrequencyTable,
 )
-from dbest_io.sampling import DBEstSampling
-from ml.modeltrainer import GroupByModelTrainer, KdeModelTrainer
-from dbest_parser.parser import (
+from dbest.io.sampling import DBEstSampling
+from dbest.ml.modeltrainer import GroupByModelTrainer, KdeModelTrainer
+from dbest.parser.parser import (
     DBEstParser,
-    parse_usecols_check_shared_attributes_exist,
     parse_y_check_need_ft_only,
 )
-from tools.dftools import (
+from dbest.tools.dftools import (
     get_group_count_from_df,
     get_group_count_from_summary_file,
     get_group_count_from_table,
 )
-from tools.running_parameters import RUNTIME_CONF, DbestConfig
-from tools.variables import Slave, UseCols
+from dbest.tools.running_parameters import RUNTIME_CONF, DbestConfig
+from dbest.tools.variables import Slave, UseCols
 
 
 class SqlExecutor:
@@ -107,7 +106,7 @@ class SqlExecutor:
                 print("Local mode is on, as no slaves are provided.")
 
     def execute(self, sql):
-        # prepare the dbest_parser
+        # prepare the parser
         if type(sql) == str:
             self.parser = DBEstParser()
             self.parser.parse(sql.lower())
@@ -913,7 +912,7 @@ class SqlExecutor:
                         else:
                             print("OK, local variable " + key + " is defined.")
                 except TypeError:
-                    # self.dbest_parser.get_set_variable_value() does not return correctly
+                    # self.parser.get_set_variable_value() does not return correctly
                     print("Parameter is not changed. Please check your SQL!")
 
                 # save the config

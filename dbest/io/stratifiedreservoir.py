@@ -11,7 +11,7 @@ from random import randint, shuffle
 import os.path
 import dill
 import numpy as np
-from dbest_parser.parser import (
+from dbest.parser.parser import (
     parse_usecols_check_shared_attributes_exist,
     parse_y_check_need_ft_only,
 )

@@ -23,9 +23,9 @@ from sklearn.preprocessing import OneHotEncoder
 from torch.autograd import Variable
 from torch.distributions import Categorical
 from torch.multiprocessing import Pool
-from ml.embedding import WordEmbedding, columns2sentences
-from ml.integral import approx_count, prepare_reg_density_data
-from ml.wordembedding import SkipGram
+from dbest.ml.embedding import WordEmbedding, columns2sentences
+from dbest.ml.integral import approx_count, prepare_reg_density_data
+from dbest.ml.wordembedding import SkipGram
 
 USE_SKIP_GRAM = True
 

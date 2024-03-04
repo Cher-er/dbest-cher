@@ -4,7 +4,7 @@
 # the University of Warwick
 # Q.Ma.2@warwick.ac.uk
 from qregpy import qreg
-from ml import mdn
+from dbest.ml import mdn
 
 
 class DBEstReg:

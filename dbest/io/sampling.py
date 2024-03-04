@@ -4,8 +4,8 @@
 # the University of Warwick
 # Q.Ma.2@warwick.ac.uk
 
-from dbest_io.reservoir import ReservoirSampling
-from dbest_io.stratifiedreservoir import StratifiedReservoir
+from dbest.io.reservoir import ReservoirSampling
+from dbest.io.stratifiedreservoir import StratifiedReservoir
 
 
 class DBEstSampling:

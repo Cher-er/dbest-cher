@@ -1,5 +1,5 @@
 class Slave:
-    """ define slaves in dbest_socket programing.
+    """ define slaves in socket programing.
     """
 
     def __init__(self, host_port: str):
