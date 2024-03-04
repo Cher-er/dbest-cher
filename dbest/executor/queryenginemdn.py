@@ -14,14 +14,13 @@ from operator import itemgetter
 import dill
 import numpy as np
 import pandas as pd
-# from dbestclient.io.sampling import DBEstSampling
-from dbest.ml.integral import (approx_avg, approx_count,
+from ml.integral import (approx_avg, approx_count,
                                      approx_integrate, approx_sum,
                                      prepare_reg_density_data, prepare_var)
-from dbest.ml.mdn import KdeMdn, RegMdnGroupBy
-from dbest.ml.modeltrainer import KdeModelTrainer
-from dbest.socket import app_client
-from dbest.tools.running_parameters import shrink_runtime_config
+from ml.mdn import KdeMdn, RegMdnGroupBy
+from ml.modeltrainer import KdeModelTrainer
+from socket import app_client
+from tools.running_parameters import shrink_runtime_config
 from scipy import integrate
 from torch.multiprocessing import Pool as PoolGPU
 
