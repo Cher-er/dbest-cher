@@ -7,6 +7,7 @@
     "n_epoch": 20,
     "n_gaussians_reg": 8,
     "n_gaussians_density": 10,
-    "csv_split_char": ","
-  }
+    "csv_split_char": "','"
+  },
+  "dataset_loc": "/home/yc/dataset/flights/flights_origin_1m/flights_origin_1m.csv"
 }
