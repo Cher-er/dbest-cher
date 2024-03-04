@@ -25,7 +25,7 @@ for key in dataset.keys():
 table_header = table_header[:-1]
 sql_executor.execute(f"set table_header='{table_header}'")
 
-# sql_executor.execute("drop table flights_distance_year_date")
-sql_executor.execute(f"create table flights_dep_delay_dest_state_abr(dep_delay real, distance real, dest_state_abr categorical) from '{dataset_loc}' GROUP BY unique_carrier")
+# sql_executor.execute("drop table template")
+sql_executor.execute(f"create table template(dep_delay real, distance real, origin_state_abr categorical) from '{dataset_loc}' GROUP BY unique_carrier")
 # SELECT AVG(dep_delay) from flights where dest_state_abr = 'GA';
-predications = sql_executor.execute("select unique_carrier, avg(dep_delay) from flights_dep_delay_dest_state_abr where distance > 0 and dest_state_abr = 'GA' GROUP BY unique_carrier")
+predications = sql_executor.execute("select unique_carrier, avg(dep_delay) from template where distance > 0 and origin_state_abr = 'LA' GROUP BY unique_carrier")
