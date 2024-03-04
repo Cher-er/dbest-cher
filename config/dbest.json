@@ -4,7 +4,7 @@
     "n_mdn_layer_node_density": 15,
     "n_jobs": 1,
     "n_hidden_layer": 1,
-    "n_epoch": 10,
+    "n_epoch": 20,
     "n_gaussians_reg": 8,
     "n_gaussians_density": 10,
     "csv_split_char": "','"
