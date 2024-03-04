@@ -144,7 +144,7 @@ class Message:
                 f"{self.addr}: {repr(e)}",
             )
         finally:
-            # Delete reference to socket object for garbage collection
+            # Delete reference to dbest_socket object for garbage collection
             self.sock = None
 
     def queue_request(self):

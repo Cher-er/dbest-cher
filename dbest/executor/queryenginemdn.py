@@ -19,7 +19,7 @@ from ml.integral import (approx_avg, approx_count,
                                      prepare_reg_density_data, prepare_var)
 from ml.mdn import KdeMdn, RegMdnGroupBy
 from ml.modeltrainer import KdeModelTrainer
-from socket import app_client
+from dbest_socket import app_client
 from tools.running_parameters import shrink_runtime_config
 from scipy import integrate
 from torch.multiprocessing import Pool as PoolGPU

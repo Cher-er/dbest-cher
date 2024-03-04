@@ -2,11 +2,10 @@
 
 import selectors
 import socket
-# import sys
 import traceback
 from datetime import datetime
 
-from socket import libclient
+from dbest_socket import libclient
 
 verbose = False
 
@@ -73,7 +72,7 @@ def run(host, port, actions, action_value):
                         f"{message.addr}:\n{traceback.format_exc()}",
                     )
                     message.close()
-            # Check for a socket being monitored to continue.
+            # Check for a dbest_socket being monitored to continue.
             if not sel.get_map():
                 break
     except KeyboardInterrupt:

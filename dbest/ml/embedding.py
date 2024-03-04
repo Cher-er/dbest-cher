@@ -19,13 +19,9 @@
 
 NumberOFAtrributes = 0
 
-import math
 import multiprocessing
-import os
-
 import pandas as pd
 import numpy as np
-
 from gensim.models import Word2Vec
 
 
