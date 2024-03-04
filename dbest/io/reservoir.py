@@ -19,7 +19,7 @@ import numpy as np
 import pandas as pd
 from statsmodels.compat.pandas import frequencies
 
-from dbest.tools.variables import UseCols
+from tools.variables import UseCols
 
 # try:
 #     range = xrange

@@ -8,7 +8,7 @@ import re
 import warnings
 
 import sqlparse
-from dbest.tools.date import unix_timestamp
+from tools.date import unix_timestamp
 from sqlparse import sql
 from sqlparse.tokens import DDL, DML, Keyword
 

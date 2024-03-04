@@ -18,7 +18,7 @@
 #
 from copy import deepcopy
 
-from dbest.tools.variables import Slaves
+from tools.variables import Slaves
 
 RUNTIME_CONF = {
     "device": "cpu",

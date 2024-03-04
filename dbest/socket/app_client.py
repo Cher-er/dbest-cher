@@ -6,7 +6,7 @@ import socket
 import traceback
 from datetime import datetime
 
-from dbest.socket import libclient
+from socket import libclient
 
 verbose = False
 

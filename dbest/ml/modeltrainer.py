@@ -7,12 +7,12 @@
 
 import numpy as np
 
-from dbest.ml.density import DBEstDensity
-from dbest.ml.mdn import KdeMdn, RegMdnGroupBy  # RegMdn
-from dbest.ml.modelwraper import (GroupByModelWrapper, KdeModelWrapper,
+from ml.density import DBEstDensity
+from ml.mdn import KdeMdn, RegMdnGroupBy  # RegMdn
+from ml.modelwraper import (GroupByModelWrapper, KdeModelWrapper,
                                         SimpleModelWrapper)
-from dbest.ml.regression import DBEstReg
-from dbest.tools.dftools import convert_df_to_yx
+from ml.regression import DBEstReg
+from tools.dftools import convert_df_to_yx
 
 
 class SimpleModelTrainer:

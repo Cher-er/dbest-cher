@@ -16,8 +16,8 @@ import numpy as np
 import torch
 from torch.multiprocessing import set_start_method as set_start_method_torch
 
-from dbest.catalog.catalog import DBEstModelCatalog
-from dbest.executor.queryenginemdn import (
+from catalog.catalog import DBEstModelCatalog
+from executor.queryenginemdn import (
     MdnQueryEngine,
     MdnQueryEngineGoGs,
     MdnQueryEngineNoRange,
@@ -28,20 +28,20 @@ from dbest.executor.queryenginemdn import (
     MdnQueryEngineXCategoricalOneModel,
     QueryEngineFrequencyTable,
 )
-from dbest.io.sampling import DBEstSampling
-from dbest.ml.modeltrainer import GroupByModelTrainer, KdeModelTrainer
-from dbest.parser.parser import (
+from io.sampling import DBEstSampling
+from ml.modeltrainer import GroupByModelTrainer, KdeModelTrainer
+from parser.parser import (
     DBEstParser,
     parse_usecols_check_shared_attributes_exist,
     parse_y_check_need_ft_only,
 )
-from dbest.tools.dftools import (
+from tools.dftools import (
     get_group_count_from_df,
     get_group_count_from_summary_file,
     get_group_count_from_table,
 )
-from dbest.tools.running_parameters import RUNTIME_CONF, DbestConfig
-from dbest.tools.variables import Slave, UseCols
+from tools.running_parameters import RUNTIME_CONF, DbestConfig
+from tools.variables import Slave, UseCols
 
 
 class SqlExecutor:

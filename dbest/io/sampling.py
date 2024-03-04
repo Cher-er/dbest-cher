@@ -5,8 +5,8 @@
 # Q.Ma.2@warwick.ac.uk
 import pandas as pd
 
-from dbest.io.reservoir import ReservoirSampling
-from dbest.io.stratifiedreservoir import StratifiedReservoir
+from io.reservoir import ReservoirSampling
+from io.stratifiedreservoir import StratifiedReservoir
 
 
 class DBEstSampling:

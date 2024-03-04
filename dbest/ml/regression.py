@@ -5,7 +5,7 @@
 # Q.Ma.2@warwick.ac.uk
 from qregpy import qreg
 
-from dbest.ml import mdn
+from ml import mdn
 
 
 class DBEstReg:

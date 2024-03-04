@@ -1,1 +1,1 @@
-from dbest.executor.executor import SqlExecutor
+from executor.executor import SqlExecutor

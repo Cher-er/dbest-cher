@@ -7,7 +7,7 @@
 import numpy as np
 from sklearn.neighbors import KernelDensity
 
-from dbest.ml.mdn import KdeMdn
+from ml.mdn import KdeMdn
 
 
 class DBEstDensity:
