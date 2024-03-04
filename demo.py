@@ -5,8 +5,10 @@ from config.config import DbestConfig
 config = DbestConfig().get_config()
 executor_parameter = config['executor_parameter']
 dataset = config['dataset']
-csv_split_char = config['csv_split_char']
 dataset_loc = config['dataset_loc']
+
+csv_split_char = executor_parameter['csv_split_char']
+
 if dataset == "flights":
     from schema.schema import flights
     dataset = flights
