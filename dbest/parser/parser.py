@@ -6,7 +6,6 @@
 
 import re
 import warnings
-
 import sqlparse
 from tools.date import unix_timestamp
 from sqlparse import sql

@@ -9,11 +9,6 @@ import itertools as it
 import math
 import random
 import sys
-from concurrent import futures
-from copy import deepcopy
-from os import remove
-from os.path import abspath
-
 import category_encoders as ce
 import dill
 import matplotlib.pyplot as plt
@@ -24,12 +19,10 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from matplotlib.widgets import Slider
-from mpl_toolkits.mplot3d import Axes3D
 from sklearn.preprocessing import OneHotEncoder
 from torch.autograd import Variable
 from torch.distributions import Categorical
 from torch.multiprocessing import Pool
-
 from ml.embedding import WordEmbedding, columns2sentences
 from ml.integral import approx_count, prepare_reg_density_data
 from ml.wordembedding import SkipGram

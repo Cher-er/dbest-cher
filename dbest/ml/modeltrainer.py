@@ -6,7 +6,6 @@
 
 
 import numpy as np
-
 from ml.density import DBEstDensity
 from ml.mdn import KdeMdn, RegMdnGroupBy  # RegMdn
 from ml.modelwraper import (GroupByModelWrapper, KdeModelWrapper,

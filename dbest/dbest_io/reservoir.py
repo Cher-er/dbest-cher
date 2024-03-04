@@ -10,21 +10,12 @@ http://erikerlandson.github.io/blog/2015/11/20/very-fast-reservoir-sampling/
 """
 
 from __future__ import division, print_function, with_statement
-
 from math import log
 from random import random
 from sys import stderr, stdin
-
 import numpy as np
 import pandas as pd
-from statsmodels.compat.pandas import frequencies
-
 from tools.variables import UseCols
-
-# try:
-#     range = xrange
-# except NameError:
-#     pass
 
 
 class ReservoirSampling:

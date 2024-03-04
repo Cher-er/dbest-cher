@@ -28,7 +28,7 @@ from executor.queryenginemdn import (
     MdnQueryEngineXCategoricalOneModel,
     QueryEngineFrequencyTable,
 )
-from io.sampling import DBEstSampling
+from dbest_io.sampling import DBEstSampling
 from ml.modeltrainer import GroupByModelTrainer, KdeModelTrainer
 from parser.parser import (
     DBEstParser,

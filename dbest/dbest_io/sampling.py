@@ -3,10 +3,9 @@
 # Department of Computer Science
 # the University of Warwick
 # Q.Ma.2@warwick.ac.uk
-import pandas as pd
 
-from io.reservoir import ReservoirSampling
-from io.stratifiedreservoir import StratifiedReservoir
+from dbest_io.reservoir import ReservoirSampling
+from dbest_io.stratifiedreservoir import StratifiedReservoir
 
 
 class DBEstSampling:

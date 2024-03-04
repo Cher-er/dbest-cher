@@ -1,8 +1,5 @@
 import multiprocessing
-
 import numpy as np
-
-# import pandas as pd
 from gensim.models import Word2Vec
 
 # from numpy.core.defchararray import startswith
