@@ -25,7 +25,8 @@ for key in dataset.keys():
 table_header = table_header[:-1]
 sql_executor.execute(f"set table_header='{table_header}'")
 
-sql_executor.execute(f"create table flights_dep_delay_distance(dep_delay real, distance real) from '{dataset_loc}' group by unique_carrier method uniform size 0.2")
+sql_executor.execute("drop table flights_dep_delay_distance")
+sql_executor.execute(f"create table flights_dep_delay_distance(dep_delay real, distance real) from '{dataset_loc}' group by unique_carrier")
 predications = sql_executor.execute("select unique_carrier, avg(dep_delay) from flights_dep_delay_distance where 300 <= distance <= 1000 group by unique_carrier")
 
 print(predications)
