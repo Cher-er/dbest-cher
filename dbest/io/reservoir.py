@@ -407,6 +407,7 @@ class ReservoirSampling:
                         frequency[key1] = count
                 total_frequency[key] = frequency
                 data[key] = gb_data
+            data["data"] = self.sampledf
 
         else:
             # check if DISTINCT is involved in the SQL
