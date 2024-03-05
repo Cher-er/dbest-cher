@@ -798,7 +798,7 @@ class SqlExecutor:
                         x_ub,
                         where_conditions,
                         self.runtime_config,
-                        groups=None,
+                        groups=["dummy"],
                         filter_dbest=filter_dbest,
                     )
 
