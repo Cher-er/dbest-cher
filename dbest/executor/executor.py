@@ -268,6 +268,7 @@ class SqlExecutor:
                         qe_mdn, self.runtime_config)
 
                 else:  # if group by is involved in the query
+                    print(groupby_attribute)
                     if self.config.get_config()["reg_type"] == "qreg":
                         xys = sampler.getyx(yheader, xheader_continous)
                         n_total_point = get_group_count_from_table(
