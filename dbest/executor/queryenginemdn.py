@@ -636,6 +636,7 @@ class MdnQueryEngine(GenericQueryEngine):
             raise ValueError("function not supported: "+func)
         if groups is None:  # provide predictions for all groups.
             groups = self.groupby_values
+        print(f"[groups] {groups}")
 
         if self.config.get_config()["accept_filter"]:
             results = self.n_total_point
