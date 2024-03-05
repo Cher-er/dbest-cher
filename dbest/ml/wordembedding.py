@@ -134,17 +134,18 @@ class SkipGram:
         return self
 
     def predicts(self, keys):
+        print(f"[keys] {keys}")
         # print("keys,", type(keys))
         # print("keys,", keys)
         headers = np.repeat([self.header_categorical], len(keys), axis=0)
+        print(f"[headers] {headers}")
         # print("headers", headers)
         sentences = np.core.defchararray.add(headers, keys)  # .tolist()
+        print(f"[sentences] {sentences}")
         # print("sentences",sentences)
         # print("self.embeddings", self.embeddings.keys())
 
         # exit()
-
-        print(sentences)
         col0 = sentences[:,0]
         print(col0)
         print(self.embeddings)
