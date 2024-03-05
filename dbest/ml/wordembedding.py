@@ -145,6 +145,7 @@ class SkipGram:
         # exit()
         
         col0 =  sentences[:,0]
+        print(col0)
         predictions = np.array([self.embeddings[i] for i in col0])
         # print("first columns ", predictions)
 
