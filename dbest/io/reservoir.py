@@ -340,9 +340,6 @@ class ReservoirSampling:
                     for item in self.usecols["x_continous"]
                     if item not in self.usecols["gb"]
                 ]
-                print(columns_to_use)
-                print(columns_to_float)
-                print(self.usecols["gb"])
                 columns_to_use = columns_to_use + columns_to_float + self.usecols["gb"]
                 gb_data = values[columns_to_use]
                 # gb_data = values[[self.usecols["y"]] +

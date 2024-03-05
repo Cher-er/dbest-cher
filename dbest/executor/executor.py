@@ -237,7 +237,7 @@ class SqlExecutor:
                         "y": yheader,
                         "x_continous": xheader_continous,
                         "x_categorical": xheader_categorical,
-                        "gb": "dummy_gb",
+                        "gb": ["dummy_gb"],
                     }
                     n_total_point, xys = sampler.get_groupby_frequency_data()
                     # if not n_total_point['if_contain_x_categorical']:
@@ -268,7 +268,6 @@ class SqlExecutor:
                         qe_mdn, self.runtime_config)
 
                 else:  # if group by is involved in the query
-                    print(groupby_attribute)
                     if self.config.get_config()["reg_type"] == "qreg":
                         xys = sampler.getyx(yheader, xheader_continous)
                         n_total_point = get_group_count_from_table(
